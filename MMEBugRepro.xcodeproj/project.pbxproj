@@ -12,6 +12,7 @@
 		10D2859222D8FC51008F2316 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10D2859022D8FC51008F2316 /* Main.storyboard */; };
 		10D2859422D8FC53008F2316 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10D2859322D8FC53008F2316 /* Assets.xcassets */; };
 		10D2859722D8FC53008F2316 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10D2859522D8FC53008F2316 /* LaunchScreen.storyboard */; };
+		13B23A1A60A1C7584445D09D /* Pods_MMEBugRepro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E82784D8F20C3C7A770D162 /* Pods_MMEBugRepro.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		10D2859322D8FC53008F2316 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10D2859622D8FC53008F2316 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10D2859822D8FC53008F2316 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1CD147638F963A5DD742D7F4 /* Pods-MMEBugRepro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMEBugRepro.release.xcconfig"; path = "Pods/Target Support Files/Pods-MMEBugRepro/Pods-MMEBugRepro.release.xcconfig"; sourceTree = "<group>"; };
+		7CEBE16AF91873D4B0B25B88 /* Pods-MMEBugRepro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMEBugRepro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MMEBugRepro/Pods-MMEBugRepro.debug.xcconfig"; sourceTree = "<group>"; };
+		8E82784D8F20C3C7A770D162 /* Pods_MMEBugRepro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MMEBugRepro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13B23A1A60A1C7584445D09D /* Pods_MMEBugRepro.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				10D2858B22D8FC51008F2316 /* MMEBugRepro */,
 				10D2858A22D8FC51008F2316 /* Products */,
+				4EFA83411E1DB032C015F158 /* Pods */,
+				52FD7BCAA4F4EFBED25B1BBE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = MMEBugRepro;
 			sourceTree = "<group>";
 		};
+		4EFA83411E1DB032C015F158 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7CEBE16AF91873D4B0B25B88 /* Pods-MMEBugRepro.debug.xcconfig */,
+				1CD147638F963A5DD742D7F4 /* Pods-MMEBugRepro.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		52FD7BCAA4F4EFBED25B1BBE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E82784D8F20C3C7A770D162 /* Pods_MMEBugRepro.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 10D2859B22D8FC53008F2316 /* Build configuration list for PBXNativeTarget "MMEBugRepro" */;
 			buildPhases = (
+				E71534744BA7404DC0760D4D /* [CP] Check Pods Manifest.lock */,
 				10D2858522D8FC51008F2316 /* Sources */,
 				10D2858622D8FC51008F2316 /* Frameworks */,
 				10D2858722D8FC51008F2316 /* Resources */,
+				8DDF88542557E9D775E94B9D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8DDF88542557E9D775E94B9D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MMEBugRepro/Pods-MMEBugRepro-frameworks.sh",
+				"${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework",
+				"${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework.dSYM",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapbox.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/Mapbox.framework.dSYM",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MMEBugRepro/Pods-MMEBugRepro-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E71534744BA7404DC0760D4D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MMEBugRepro-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		10D2858522D8FC51008F2316 /* Sources */ = {
@@ -280,10 +355,13 @@
 		};
 		10D2859C22D8FC53008F2316 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CEBE16AF91873D4B0B25B88 /* Pods-MMEBugRepro.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FXW99ZQHH6;
 				INFOPLIST_FILE = MMEBugRepro/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -297,10 +375,13 @@
 		};
 		10D2859D22D8FC53008F2316 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CD147638F963A5DD742D7F4 /* Pods-MMEBugRepro.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FXW99ZQHH6;
 				INFOPLIST_FILE = MMEBugRepro/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
